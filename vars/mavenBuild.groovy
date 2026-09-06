@@ -1,7 +1,7 @@
 def call(serviceDir){
    echo "Building the application"
 
-    dir('cart-service') {
+    dir(serviceDir) {
         sh '''
             mvn clean compile
         '''
