@@ -1,4 +1,4 @@
-def call(
+def call(serviceDir){
    echo "Building the application"
 
     dir('cart-service') {
@@ -8,4 +8,4 @@ def call(
     }
 
     echo "Build completed successfully"
-)
+}
