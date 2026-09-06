@@ -1,4 +1,4 @@
-def call() {
+def call(serviceDir) {
 
     echo "Running SonarQube analysis"
 
@@ -11,7 +11,7 @@ def call() {
 
         withSonarQubeEnv('sonar-server-name') {
 
-            dir('cart-service') {
+            dir(serviceDir) {
 
                 sh '''
                     mvn sonar:sonar \
