@@ -1,8 +1,8 @@
-def call() {
+def call(serviceDir) {
 
     echo "Running OWASP dependency check"
 
-    dir('cart-service') {
+    dir(serviceDir) {
         sh '''
             mvn org.owasp:dependency-check-maven:check
         '''
