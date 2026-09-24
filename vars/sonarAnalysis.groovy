@@ -14,9 +14,10 @@ def call(serviceDir) {
             dir(serviceDir) {
 
                 sh '''
-                    mvn sonar:sonar \
-                    -Dsonar.token="$SONAR_TOKEN"
-                '''
+                        mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+                        -Dsonar.token="$SONAR_TOKEN"
+                      '''
+
             }
         }
     }
